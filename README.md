@@ -78,6 +78,9 @@ git clone https://github.com/<ORG>/noveya-meta-platform.git
 https://github.com/NgoiSigma/NOVEYA-Meta-Platform/discussions
 
 ---
+Creative Commons Legal Code
 
+CC0 1.0 Universal
++
 **Ліцензія:** FDL-OpenKnowledge
 **Версія:** v1.0.0
