@@ -1,0 +1,43 @@
+{
+  "node_id": "RO2-MYKOLAIV-52aa02af",
+  "auth_key": "254eb70eb32f",
+  "mantra": "WHERE_I_AM_EVEN_THE_DEAD_LIVES",
+  "resonance": 432.0,
+  "metrics": {
+    "conjunction": 56.6,
+    "inertia": 68.1,
+    "nodes_online": 842,
+    "target_conjunction": 57.5,
+    "target_inertia": 65.2,
+    "P_success": "95.4%",
+    "distance_to_target": 0.9
+  },
+  "svet_status": {
+    "energy_balance": 98.28,
+    "balance_status": "ГАРМОНИЯ (98.3)",
+    "resonance": 432.0,
+    "resonance_locked": true,
+    "history_length": 5
+  },
+  "lexicon_stats": {
+    "total_scans": 9,
+    "clean_count": 4,
+    "blocked_count": 5,
+    "latest_verdict": "МЕТАГАРМОНИЯ"
+  },
+  "token_ledger": {
+    "node_id": "RO2-MYKOLAIV-52aa02af",
+    "total_tokens": 8,
+    "operations": {
+      "activation": 1,
+      "sync": 1,
+      "token_gen": 1,
+      "batch_gen_1": 1,
+      "batch_gen_2": 1,
+      "batch_gen_3": 1,
+      "batch_gen_4": 1,
+      "batch_gen_5": 1
+    },
+    "total_value": 24.0405
+  }
+}

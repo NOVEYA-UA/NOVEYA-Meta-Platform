@@ -1,0 +1,6 @@
+﻿config.json
+*.log
+__pycache__/
+data/users.json
+.env
+Node_7_Chronos/Archive/*

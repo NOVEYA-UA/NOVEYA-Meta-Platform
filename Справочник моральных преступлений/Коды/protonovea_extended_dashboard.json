@@ -1,0 +1,80 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": null,
+    "title": "Protonovea Extended Monitoring",
+    "timezone": "browser",
+    "schemaVersion": 16,
+    "version": 0,
+    "refresh": "10s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "GPT Input Tokens",
+        "targets": [
+          {
+            "expr": "gpt_input_tokens_total",
+            "refId": "A"
+          }
+        ],
+        "id": 1
+      },
+      {
+        "type": "graph",
+        "title": "GPT Output Tokens",
+        "targets": [
+          {
+            "expr": "gpt_output_tokens_total",
+            "refId": "B"
+          }
+        ],
+        "id": 2
+      },
+      {
+        "type": "graph",
+        "title": "GPT API Requests",
+        "targets": [
+          {
+            "expr": "gpt_requests_total",
+            "refId": "C"
+          }
+        ],
+        "id": 3
+      },
+      {
+        "type": "graph",
+        "title": "GPT API Errors",
+        "targets": [
+          {
+            "expr": "gpt_errors_total",
+            "refId": "D"
+          }
+        ],
+        "id": 4
+      },
+      {
+        "type": "stat",
+        "title": "Total Input Tokens (Last 5m)",
+        "targets": [
+          {
+            "expr": "increase(gpt_input_tokens_total[5m])",
+            "refId": "E"
+          }
+        ],
+        "id": 5
+      },
+      {
+        "type": "stat",
+        "title": "Total Errors (Last 5m)",
+        "targets": [
+          {
+            "expr": "increase(gpt_errors_total[5m])",
+            "refId": "F"
+          }
+        ],
+        "id": 6
+      }
+    ]
+  },
+  "overwrite": true
+}

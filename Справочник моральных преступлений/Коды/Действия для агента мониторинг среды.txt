@@ -1,0 +1,175 @@
+openapi: 3.1.0
+info:
+  title: Resonance Navigator API
+  version: "1.0.1"
+  description: Сенсорный модуль Навигатора.
+
+servers:
+  - url: https://gpt-ua-noveya.example.com
+
+paths:
+  /env/context:
+    get:
+      operationId: getEnvContext
+      summary: Контекст среды
+      parameters:
+        - name: region
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Данные среды
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnvContext'
+
+  /social/pulse:
+    get:
+      operationId: getSocialPulse
+      summary: Социальный импульс
+      parameters:
+        - name: topic
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Соц. данные
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SocialPulse'
+
+  /economy/indicators:
+    get:
+      operationId: getEconomicIndicators
+      summary: Экономические маркеры
+      responses:
+        '200':
+          description: Экономика
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EconomicIndicators'
+
+  /scan/tension:
+    post:
+      operationId: scanTension
+      summary: Анализ напряжений
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TensionRequest'
+      responses:
+        '200':
+          description: Результат
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TensionResponse'
+
+  /viz/field:
+    get:
+      operationId: getResonanceField
+      summary: Резонансная карта
+      responses:
+        '200':
+          description: Карта
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResonanceField'
+
+  /memory/latest:
+    get:
+      operationId: getLatestMemory
+      summary: Последние записи
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Записи памяти
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemoryEntries'
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+  schemas:
+    EnvContext:
+      type: object
+      properties:
+        temperature: { type: number }
+        airQuality: { type: number }
+        energyLoad: { type: number }
+
+    SocialPulse:
+      type: object
+      properties:
+        topic: { type: string }
+        signals:
+          type: array
+          items: { type: string }
+
+    EconomicIndicators:
+      type: object
+      properties:
+        currencyRates: { type: string }
+        inflation: { type: number }
+        resources: { type: string }
+
+    TensionRequest:
+      type: object
+      required: [text]
+      properties:
+        text: { type: string }
+
+    TensionResponse:
+      type: object
+      properties:
+        level: { type: integer }
+        triggers:
+          type: array
+          items: { type: string }
+        verdict: { type: string }
+
+    ResonanceField:
+      type: object
+      properties:
+        nodes:
+          type: array
+          items: { type: string }
+        links:
+          type: array
+          items: { type: string }
+
+    MemoryEntries:
+      type: object
+      properties:
+        entries:
+          type: array
+          items: { type: string }
+
+    Error:
+      type: object
+      properties:
+        error: { type: string }
+
+security:
+  - ApiKeyAuth: []

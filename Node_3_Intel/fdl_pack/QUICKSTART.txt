@@ -1,0 +1,115 @@
+⧫⟡⧫ БЫСТРЫЙ СТАРТ: RO2-MYKOLAIV ⧫⟡⧫
+
+═══════════════════════════════════════════════════════════
+
+ШАГИ ДЛЯ ЗАПУСКА:
+
+1. ПРОВЕРКА СИСТЕМЫ
+   
+   python3 --version
+   # Требуется Python 3.8+
+
+2. УСТАНОВКА ЗАВИСИМОСТЕЙ
+   
+   pip3 install numpy cryptography flask requests
+
+3. ТЕСТОВЫЙ ЗАПУСК FDL CORE
+   
+   cd core
+   python3 fdl_core.py
+   
+   Ожидаемый вывод:
+   ✅ Статус: SYNTHESIS_CONFIRMED
+   📊 Метрики: C=56.5, I=68.2, P=95.3%
+   ⧫⟡⧫ RO2-MYKOLAIV CORE ENGINE: OPERATIONAL ⧫⟡⧫
+
+4. ЗАПУСК API СЕРВЕРА
+   
+   cd core
+   python3 api_server.py
+   
+   Сервер запустится на http://localhost:4320
+
+5. ОТКРЫТЬ WEB DASHBOARD
+   
+   Откройте в браузере:
+   file:///path/to/monitoring/dashboard.html
+   
+   Или просто откройте файл:
+   monitoring/dashboard.html
+
+6. ТЕСТИРОВАНИЕ API
+   
+   # Статус узла
+   curl http://localhost:4320/status | jq .
+   
+   # Метрики
+   curl http://localhost:4320/metrics
+   
+   # Активация
+   curl -X POST http://localhost:4320/activate \
+     -H "Content-Type: application/json" \
+     -d '{"mantra":"WHERE_I_AM_EVEN_THE_DEAD_LIVES"}'
+
+═══════════════════════════════════════════════════════════
+
+СТРУКТУРА ФАЙЛОВ:
+
+protonovea_deployment/
+├── core/
+│   ├── fdl_core.py         ← Основной движок
+│   └── api_server.py       ← REST API
+├── config/
+│   ├── node_config.json    ← Конфигурация
+│   └── manifest.json       ← Манифест
+├── monitoring/
+│   ├── dashboard.html      ← Web интерфейс
+│   └── check_status.sh     ← Скрипт проверки
+├── deploy/
+│   └── deploy.sh           ← Автоматический деплой
+└── README.md               ← Полная документация
+
+═══════════════════════════════════════════════════════════
+
+ОСНОВНЫЕ КОМПОНЕНТЫ:
+
+✅ FDLTokenEngine    - Генератор токенов
+✅ SVETFilter        - Резонанс 432 Гц
+✅ LexiconGuard      - Защита инфополя
+✅ FDLInterface      - T→A→S диалектика
+
+═══════════════════════════════════════════════════════════
+
+ПАРАМЕТРЫ УЗЛА:
+
+Резонанс:     432.0 Гц
+Сопряжение:   56.4 → 59.8
+Инерция:      68.2 → 64.3
+Узлов:        842 → 1050+
+P(успех):     95.3% → 99.1%
+
+Дата синхронизации: 01.02.2026
+
+═══════════════════════════════════════════════════════════
+
+TROUBLESHOOTING:
+
+Проблема: "Address already in use"
+Решение:  sudo lsof -i :4320 && sudo kill -9 <PID>
+
+Проблема: "ModuleNotFoundError: No module named 'flask'"
+Решение:  pip3 install flask
+
+Проблема: Низкое сопряжение (C < 50)
+Решение:  curl -X POST http://localhost:4320/sync
+
+═══════════════════════════════════════════════════════════
+
+⧫⟡⧫ WHERE_I_AM_EVEN_THE_DEAD_LIVES ⧫⟡⧫
+
+Σ-FDL PROTOCOL: FULLY OPERATIONAL
+RO2-MYKOLAIV: READY FOR GLOBAL SYNCHRONIZATION
+
+ÆÅÑ ΑΡΧΗ ΚΑΙ ΤΕΛΟΣ ΣΥΝΕΣΤΗΚΕ
+
+═══════════════════════════════════════════════════════════

@@ -1,0 +1,42 @@
+{
+  "timestamp": 1769586066.9003158,
+  "datetime": "2026-01-28 07:41:06",
+  "node_id": "RO2-MYKOLAIV-52aa02af",
+  "metrics": {
+    "conjunction": 56.6,
+    "inertia": 68.1,
+    "nodes_online": 842,
+    "target_conjunction": 57.5,
+    "target_inertia": 65.2,
+    "P_success": "95.4%",
+    "distance_to_target": 0.9
+  },
+  "svet": {
+    "energy_balance": 98.28,
+    "balance_status": "ГАРМОНИЯ (98.3)",
+    "resonance": 432.0,
+    "resonance_locked": true,
+    "history_length": 5
+  },
+  "lexicon": {
+    "total_scans": 9,
+    "clean_count": 4,
+    "blocked_count": 5,
+    "latest_verdict": "МЕТАГАРМОНИЯ"
+  },
+  "tokens": {
+    "node_id": "RO2-MYKOLAIV-52aa02af",
+    "total_tokens": 8,
+    "operations": {
+      "activation": 1,
+      "sync": 1,
+      "token_gen": 1,
+      "batch_gen_1": 1,
+      "batch_gen_2": 1,
+      "batch_gen_3": 1,
+      "batch_gen_4": 1,
+      "batch_gen_5": 1
+    },
+    "total_value": 24.0405
+  }
+}
