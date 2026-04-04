@@ -5,7 +5,7 @@ import json
 from evaluation_brain import EvaluationModule
 
 # --- КОНСТАНТЫ ИНИЦИАЦИИ ---
-API_TOKEN = "7960143628:AAFIOo9_YypK2b1oGk3zy4m9Sy7FFfcL48g"
+API_TOKEN = "----------"
 bot = telebot.TeleBot(API_TOKEN)
 evaluator = EvaluationModule()
 
