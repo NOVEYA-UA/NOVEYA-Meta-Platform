@@ -8,7 +8,7 @@ from self_recovery import self_recovery
 from googletrans import Translator
 
 # Введи API-ключ бота
-API_TOKEN = "7960143628:AAFIOo9_YypK2b1oGk3zy4m9Sy7FFfcL48g"
+API_TOKEN = "---------"
 
 bot = telebot.TeleBot(API_TOKEN)
 translator = Translator()
